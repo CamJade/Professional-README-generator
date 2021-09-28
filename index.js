@@ -45,11 +45,11 @@ const genMarkdown = require('./Develop/utils/generateMarkdown.js');
     message: 'Which license would you like to use?',
     choices: [
         'Apache',
-        'Academic',
+        //'Academic',
         'GNU',
         'MIT',
         'Mozilla',
-        'Open'
+        'ODbL'
         ]
     }, 
     
@@ -83,7 +83,7 @@ const genMarkdown = require('./Develop/utils/generateMarkdown.js');
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
+    fs.writeFile('README.md', data, (err) => {
         if (err) {
             console.log('error with writing file');
         }
